@@ -1,0 +1,31 @@
+{
+  "name": "sharathbp.github.io",
+  "version": "1.0.0",
+  "description": "portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sharathbp/sharathbp.github.io.git"
+  },
+  "keywords": [
+    "portfolio"
+  ],
+  "author": "sharathbp",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sharathbp/sharathbp.github.io/issues"
+  },
+  "homepage": "https://github.com/sharathbp/sharathbp.github.io#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "browser-sync": "^2.26.7",
+    "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
+    "gulp-sass": "^4.1.0",
+    "node-sass": "^4.14.1",
+    "webpack": "^4.43.0"
+  }
+}
