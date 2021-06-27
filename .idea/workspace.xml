@@ -1,7 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="50359c3d-e83f-4509-9719-013b04bedada" name="Default Changelist" comment="" />
+    <list default="true" id="50359c3d-e83f-4509-9719-013b04bedada" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-image/diskstore-1de8fd459f4e93812bccab1bf7ed79b9.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-image/diskstore-1de8fd459f4e93812bccab1bf7ed79b9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-image/diskstore-c678463319acd66aa02bb9f08afc7963.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-image/diskstore-c678463319acd66aa02bb9f08afc7963.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-037290a585c52b87e72bae2c54164352.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-0742eb044f8df89533aa8991d70dccef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-15f4394b71a1abdd1ca5fb83e8b88e8d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-26bbbf64e17602a8bc6c16fbd9438f18.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-301ff0f00e84f0edd12f2946741f87f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-4891bd6913710244fdd0a6311c6cb6d3.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-497308a7a63bf4afca71298d3a7e856b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-5331bb2f7f7abae095b7f99ce06da353.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-5f2f51999ed4e4d94fb10c2bd5561ccf.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-66b766f7e3d0740e323ca6d0d3b2a218.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-8412bc36bc37e458a1504e931ab10a16.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-905ff99355caa39e16d5b8cf4b3b69c9.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-937e717ec0eb57b5fef63c1c0393fd92.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-9551a3b4c4b1b74633f132ad231b5e84.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-96002d79c564e70bbfd14396eb5a127f.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-9f50e93da97bc518a8ef1c2c24b51757.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-ab47266e83917db094b3aa13ff9ff62b.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-b2a6d6f88f932ad0d7b1a8bda198336e.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-b72666aaadf64c23db062a320eda1ab2.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-bea7589b97aa89d654e1f41bbdad30ae.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-c9709f9ee85cc53d80e4bc99fdaef889.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-d10e8b997d21a3cf4fa714cb4e00b9fd.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-d59b2195be13454e2069703bbe0bc23d.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-e202ea10f62c54ce5b971bbe1cad17d1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-e908e7272c5af56c9dea298568e04001.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-eb608a2aaf5130443fc7da3587ebaf20.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-plugin-sharp/diskstore-fedc57eba94bd7a487520643d52197e6.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-1ca5842dc67c2ab029de4cdcd6b9d331.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-1ca5842dc67c2ab029de4cdcd6b9d331.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-3196fb8d484308cfd9bdd5a723714454.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-3196fb8d484308cfd9bdd5a723714454.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-33c60f0cf99369670e929d6d28f38d94.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-33c60f0cf99369670e929d6d28f38d94.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-34ae96f88799008940cf725b00ad20a9.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-34ae96f88799008940cf725b00ad20a9.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-5481b412575f745574b96d7bb76e62de.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-5481b412575f745574b96d7bb76e62de.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-6fe4fe023a53d1b06d00e963e44a9a35.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-6fe4fe023a53d1b06d00e963e44a9a35.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-712f4e67e1bbee56e014a559716249db.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-712f4e67e1bbee56e014a559716249db.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-730fbaa169683b1c9c1acd07e3ef6dbf.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-730fbaa169683b1c9c1acd07e3ef6dbf.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-856ef4b2c20807a349c7714a32b56392.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-856ef4b2c20807a349c7714a32b56392.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9443ecb3a7637a66f33166f8d5fb5ac7.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9443ecb3a7637a66f33166f8d5fb5ac7.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9e39e759436da6e21f31cdf77e00826b.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-9e39e759436da6e21f31cdf77e00826b.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a21c7165f13f820f5b82a5ebdac723dd.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a21c7165f13f820f5b82a5ebdac723dd.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a3aed8895989ac9c9c26846ecec03cf5.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-a3aed8895989ac9c9c26846ecec03cf5.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-e82e589eb9f2e212acfad178e65ae7f4.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-e82e589eb9f2e212acfad178e65ae7f4.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-f8a154b0017ef712e21ed058ce40df5e.json" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/caches/gatsby-transformer-remark/diskstore-f8a154b0017ef712e21ed058ce40df5e.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/redux/redux.node.state_0" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/redux/redux.node.state_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/redux/redux.page.state_0" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/redux/redux.page.state_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.cache/redux/redux.rest.state" beforeDir="false" afterPath="$PROJECT_DIR$/.cache/redux/redux.rest.state" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/page-data/sq/d/2899468069.json" beforeDir="false" afterPath="$PROJECT_DIR$/public/page-data/sq/d/2899468069.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/contact.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/contact.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/experience.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/experience.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/sections/projects.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/sections/projects.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -34,7 +88,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1624824481392</updated>
-      <workItem from="1624824482968" duration="118000" />
+      <workItem from="1624824482968" duration="1546000" />
+      <workItem from="1624828393855" duration="629000" />
     </task>
     <servers />
   </component>

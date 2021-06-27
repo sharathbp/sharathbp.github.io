@@ -14,7 +14,7 @@ const StyledExperienceContent = styled.section`
   display: flex;
   flex-direction: column;
   
-  align-items: flex-end;
+  align-items: center;
 
   //.inner {
   //  display: flex;

@@ -24,10 +24,12 @@ const StyledContactContent = styled.section`
   
   .contact-options {
     display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: center;
     gap: 10%;
-    width: 80%;
+    width: 100%;
     
     .link {
       cursor: pointer;
@@ -35,17 +37,15 @@ const StyledContactContent = styled.section`
       justify-content: center;
       align-items: center;
       background: transparent;
-      border: 1px solid red;
+      border: 1px solid black;
       border-radius: 5px;
-      padding: 10px;
-      height: 100%;
-      width: 100%;
+      padding: 15px;
       max-width: 500px;
-      gap: 10%;
+      gap: 5px;
 
       img {
-        width: 40px;
-        height: 40px;
+        width: 30px;
+        height: 30px;
         color: maroon;
         fill: green;
       }
