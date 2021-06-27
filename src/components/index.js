@@ -1,0 +1,12 @@
+export { default as Header } from "./header"
+export { default as Footer } from "./Footer"
+export { default as Layout } from "./Layout"
+export { default as Social } from "./Social"
+export { default as Loader } from "./Loader"
+
+export { default as About } from "./sections/about"
+export { default as Contact } from "./sections/contact"
+export { default as Experience } from "./sections/experience"
+export { default as Intro } from "./sections/intro"
+export { default as Projects } from "./sections/projects"
+export { default as Others } from "./sections/others"

@@ -1,37 +1,54 @@
-## Welcome to GitHub Pages
+<p align="center">
+  <a href="https://www.gatsbyjs.com/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter">
+    <img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+  </a>
+</p>
+<h1 align="center">
+  Gatsby minimal starter
+</h1>
 
-You can use the [editor on GitHub](https://github.com/sharathbp/portfolio/edit/master/README.md) to maintain and preview the content for your website in Markdown files.
+## 🚀 Quick start
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+1.  **Create a Gatsby site.**
 
-### Markdown
+    Use the Gatsby CLI to create a new site, specifying the minimal starter.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+    ```shell
+    # create a new Gatsby site using the minimal starter
+    npm init gatsby
+    ```
 
-```markdown
-Syntax highlighted code block
+2.  **Start developing.**
 
-# Header 1
-## Header 2
-### Header 3
+    Navigate into your new site’s directory and start it up.
 
-- Bulleted
-- List
+    ```shell
+    cd my-gatsby-site/
+    npm run develop
+    ```
 
-1. Numbered
-2. List
+3.  **Open the code and start customizing!**
 
-**Bold** and _Italic_ and `Code` text
+    Your site is now running at http://localhost:8000!
 
-[Link](url) and ![Image](src)
-```
+    Edit `src/pages/index.js` to see your site update in real-time!
 
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
+4.  **Learn more**
 
-### Jekyll Themes
+    - [Documentation](https://www.gatsbyjs.com/docs/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/sharathbp/portfolio/settings). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
+    - [Tutorials](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-### Support or Contact
+    - [Guides](https://www.gatsbyjs.com/tutorial/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
 
-Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+    - [API Reference](https://www.gatsbyjs.com/docs/api-reference/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Plugin Library](https://www.gatsbyjs.com/plugins?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+    - [Cheat Sheet](https://www.gatsbyjs.com/docs/cheat-sheet/?utm_source=starter&utm_medium=readme&utm_campaign=minimal-starter)
+
+## 🚀 Quick start (Gatsby Cloud)
+
+Deploy this starter with one click on [Gatsby Cloud](https://www.gatsbyjs.com/cloud/):
+
+[<img src="https://www.gatsbyjs.com/deploynow.svg" alt="Deploy to Gatsby Cloud">](https://www.gatsbyjs.com/dashboard/deploynow?url=https://github.com/gatsbyjs/gatsby-starter-minimal)
