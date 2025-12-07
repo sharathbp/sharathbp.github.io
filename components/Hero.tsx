@@ -1,66 +1,67 @@
 
 import React from 'react';
-import { Github, Linkedin, Mail, Download, ArrowRight } from 'lucide-react';
+import { Github, Linkedin, Mail, Download, ArrowRight, Cpu, Terminal, Shield } from 'lucide-react';
 
 const Hero: React.FC = () => {
   return (
-    <section id="hero" className="min-h-[85vh] flex flex-col justify-center text-center items-center py-20 relative">
+    <section id="hero" className="min-h-[85vh] flex flex-col justify-center text-center items-center py-10 relative overflow-hidden">
 
-      {/* Badge with Spring Animation */}
-      <div className="reveal inline-block px-4 py-1.5 mb-8 text-sm font-bold tracking-widest text-google-blue uppercase bg-white/80 dark:bg-white/10 backdrop-blur-sm rounded-full border border-google-blue/30 shadow-lg shadow-google-blue/10 animate-spring hover:scale-105 transition-transform duration-300 cursor-default">
-        Software Engineer • AWS
+      {/* Background Tech Elements */}
+      <div className="absolute top-1/4 left-10 w-24 h-24 border-t-2 border-l-2 border-cyan-500/20 rounded-tl-3xl animate-pulse"></div>
+      <div className="absolute bottom-1/4 right-10 w-24 h-24 border-b-2 border-r-2 border-purple-500/20 rounded-br-3xl animate-pulse delay-700"></div>
+
+      {/* System Status Badge */}
+      <div className="reveal inline-flex items-center gap-2 px-4 py-1 mb-8 text-xs font-mono font-bold tracking-widest text-cyan-400 uppercase bg-cyan-900/20 border border-cyan-500/30 clip-tech-sm">
+        <span className="w-2 h-2 bg-cyan-500 rounded-full animate-ping"></span>
+        System Online // Engineer.Class
       </div>
 
       {/* Jumbo Typography */}
-      <h1 className="reveal delay-100 text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight text-slate-900 dark:text-white font-display mb-8 leading-[0.9] drop-shadow-sm">
-        <span className="block hover:text-google-blue transition-colors duration-300">Code.</span>
-        <span className="block text-transparent bg-clip-text bg-gradient-to-r from-google-blue via-google-red to-google-yellow pb-2">
-          Scale.
+      <h1 className="reveal delay-100 text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter font-display mb-8 leading-[0.85] uppercase">
+        <span className="block text-white text-glow hover-glitch" data-text="CODE">Code.</span>
+        <span className="block text-gradient-cyber pb-4 hover-glitch" data-text="TRANSFORM">
+          Transform.
         </span>
-        <span className="block hover:text-google-green transition-colors duration-300">Repeat.</span>
+        <span className="block text-slate-500 hover:text-white transition-colors duration-300 hover-glitch" data-text="DEPLOY">Deploy.</span>
       </h1>
 
-      <p className="reveal delay-200 max-w-2xl text-base md:text-lg text-slate-600 dark:text-gray-300 leading-relaxed mb-12 font-medium bg-white/30 dark:bg-black/20 backdrop-blur-sm p-4 rounded-2xl">
-        Hey, I'm <span className="text-slate-900 dark:text-white font-bold">Sharath</span>—a Software Engineer at <span className="text-google-blue font-bold">AWS</span> who turns messy problems into clean, scalable solutions.
+      <p className="reveal delay-200 max-w-2xl text-lg md:text-xl text-slate-400 font-sans leading-relaxed mb-12 border-l-2 border-purple-500 pl-6 text-left mx-auto bg-white/5 p-4 clip-tech-sm">
+        <span className="text-purple-400 font-bold">&gt;&gt; IDENTITY CONFIRMED:</span> Sharath B P.<br />
+        <span className="text-cyan-400 font-bold">&gt;&gt; MISSION:</span> Architecting scalable distributed systems at <span className="text-white font-bold">AWS</span>. Turning chaos into structured code.
       </p>
 
-      {/* Magnetic Buttons Container */}
-      <div className="reveal delay-300 flex flex-wrap items-center justify-center gap-5">
-        <a
-          href="#projects"
-          className="group relative px-8 py-4 rounded-full bg-slate-900 dark:bg-white text-white dark:text-google-dark font-bold text-lg tracking-wide shadow-xl hover:shadow-2xl transition-all duration-300 hover:-translate-y-1 active:scale-95 flex items-center gap-2 overflow-hidden"
-        >
-          <span className="relative z-10">View Work</span>
-          <ArrowRight className="w-5 h-5 relative z-10 group-hover:translate-x-1 transition-transform" />
-          <div className="absolute inset-0 bg-google-blue transform scale-x-0 group-hover:scale-x-100 transition-transform origin-left duration-500 ease-out"></div>
+      {/* Mechanical Buttons */}
+      <div className="reveal delay-300 flex flex-wrap items-center justify-center gap-6">
+        <a href="#projects" className="btn-mech-primary group flex items-center gap-2">
+          <Cpu className="w-5 h-5" />
+          <span>Initiate Projects</span>
         </a>
 
-        <a
-          href="/resume.pdf"
-          className="group px-8 py-4 rounded-full bg-white/80 dark:bg-white/5 backdrop-blur-sm text-slate-900 dark:text-white border border-slate-200 dark:border-white/10 font-bold text-lg tracking-wide shadow-sm hover:shadow-lg transition-all duration-300 hover:-translate-y-1 active:scale-95 flex items-center gap-2 hover:border-google-red"
-        >
-          <Download className="w-5 h-5 group-hover:animate-bounce" /> Resume
+        <a href="/resume.pdf" className="btn-mech group flex items-center gap-2">
+          <Download className="w-5 h-5 group-hover:animate-bounce" />
+          <span>Download Data</span>
         </a>
       </div>
 
-      <div className="reveal delay-300 mt-16 flex items-center gap-8 p-4 rounded-full bg-white/30 dark:bg-black/10 backdrop-blur-sm">
-        <SocialIcon href="https://github.com/sharathbp" icon={<Github className="w-6 h-6" />} color="hover:text-slate-900 dark:hover:text-white" />
-        <SocialIcon href="https://linkedin.com/in/sharath-bp" icon={<Linkedin className="w-6 h-6" />} color="hover:text-[#0077b5]" />
-        <SocialIcon href="mailto:sharathbp@outlook.com" icon={<Mail className="w-6 h-6" />} color="hover:text-google-red" />
+      <div className="reveal delay-300 mt-20 flex items-center gap-8 p-4 border-t border-white/10 w-full max-w-lg justify-center">
+        <SocialIcon href="https://github.com/sharathbp" icon={<Github className="w-6 h-6" />} label="GITHUB" />
+        <SocialIcon href="https://linkedin.com/in/sharath-bp" icon={<Linkedin className="w-6 h-6" />} label="LINKEDIN" />
+        <SocialIcon href="mailto:sharathbp@outlook.com" icon={<Mail className="w-6 h-6" />} label="EMAIL" />
       </div>
     </section>
   );
 };
 
-const SocialIcon = ({ href, icon, color }: { href: string; icon: React.ReactNode; color: string }) => (
+const SocialIcon = ({ href, icon, label }: { href: string; icon: React.ReactNode; label: string }) => (
   <a
     href={href}
     target="_blank"
     rel="noreferrer"
-    className={`text-slate-400 transition-all duration-300 hover:scale-125 hover:-translate-y-1 ${color}`}
-    aria-label="Social Link"
+    className="flex flex-col items-center gap-1 text-slate-500 hover:text-cyan-400 transition-all duration-300 hover:scale-110 group"
+    aria-label={label}
   >
     {icon}
+    <span className="text-[10px] font-mono tracking-widest opacity-0 group-hover:opacity-100 transition-opacity text-cyan-500">{label}</span>
   </a>
 );
 

@@ -16,9 +16,9 @@ const experiences: ExperienceType[] = [
     ],
     skills: ['Java', 'AWS', 'Distributed Systems', 'Aurora', 'Infrastructure as Code', 'Terraform'],
     link: 'https://aws.amazon.com',
-    color: 'text-google-blue',
-    bg: 'bg-google-blue',
-    border: 'border-google-blue'
+    color: 'text-cyan-400',
+    bg: 'bg-cyan-500',
+    border: 'border-cyan-500'
   },
   {
     id: 'amazon',
@@ -31,9 +31,9 @@ const experiences: ExperienceType[] = [
     ],
     skills: ['Java', 'Spring Boot', 'React', 'AWS', 'Microservices'],
     link: 'https://amazon.com',
-    color: 'text-google-yellow',
-    bg: 'bg-google-yellow',
-    border: 'border-google-yellow'
+    color: 'text-purple-400',
+    bg: 'bg-purple-500',
+    border: 'border-purple-500'
   },
   {
     id: 'onedirect',
@@ -47,9 +47,9 @@ const experiences: ExperienceType[] = [
     ],
     skills: ['Python', 'Django', 'React', 'React Native', 'Android', 'PostgreSQL', 'Redis'],
     link: '#',
-    color: 'text-google-green',
-    bg: 'bg-google-green',
-    border: 'border-google-green'
+    color: 'text-pink-400',
+    bg: 'bg-pink-500',
+    border: 'border-pink-500'
   },
   {
     id: 'flintzy',
@@ -62,58 +62,60 @@ const experiences: ExperienceType[] = [
     ],
     skills: ['JavaScript', 'Node.js', 'React', 'MongoDB', 'Express'],
     link: '#',
-    color: 'text-google-red',
-    bg: 'bg-google-red',
-    border: 'border-google-red'
+    color: 'text-yellow-400',
+    bg: 'bg-yellow-500',
+    border: 'border-yellow-500'
   }
 ];
 
 const Experience: React.FC = () => {
   return (
-    <section id="experience" className="py-20">
+    <section id="experience" className="py-10">
       <div className="flex items-center gap-3 mb-10 reveal">
-        <span className="w-3 h-3 bg-google-red rounded-full animate-pulse"></span>
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white font-display">Experience</h2>
+        <span className="w-2 h-2 bg-pink-500 rounded-none animate-pulse"></span>
+        <h2 className="text-2xl font-bold text-white font-display tracking-widest uppercase">
+          &lt; System.Log /&gt;
+        </h2>
       </div>
 
       <div className="relative space-y-12">
-        {/* Vertical Line */}
-        <div className="absolute left-4 md:left-6 top-4 bottom-4 w-0.5 bg-gradient-to-b from-slate-200 via-slate-200 to-transparent dark:from-white/10 dark:via-white/10"></div>
+        {/* Vertical Line - Data Stream */}
+        <div className="absolute left-4 md:left-6 top-4 bottom-4 w-0.5 bg-gradient-to-b from-cyan-500/50 via-purple-500/20 to-transparent border-l border-dashed border-cyan-500/30"></div>
 
         {experiences.map((exp, idx) => (
           <div key={exp.id} className="reveal relative pl-12 md:pl-20" style={{ transitionDelay: `${idx * 150}ms` }}>
 
-            {/* Timeline Node - Jelly Animation */}
-            <div className={`absolute left-2 md:left-4 top-0 w-4 h-4 rounded-full border-4 border-white dark:border-google-dark ${exp.bg} shadow-lg z-10 hover:scale-125 transition-transform duration-300`}></div>
+            {/* Timeline Node - Mechanical Node */}
+            <div className={`absolute left-2 md:left-4 top-0 w-4 h-4 bg-[#020617] border-2 ${exp.border} z-10 hover:scale-125 transition-transform duration-300 shadow-[0_0_10px_rgba(6,182,212,0.5)]`}></div>
 
-            <div className={`group relative bg-white/60 dark:bg-google-darksurface/60 backdrop-blur-xl rounded-[2rem] p-8 shadow-sm border border-slate-100 dark:border-white/5 hover:border-${exp.border?.split('-')[1] || 'google-blue'} hover:shadow-xl transition-all duration-300 hover:-translate-y-1`}>
+            <div className={`group relative tech-card p-8 clip-tech hover:border-${exp.border?.split('-')[1] || 'cyan-500'} transition-all duration-300 hover:-translate-y-1`}>
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-slate-900 dark:text-white group-hover:text-google-blue transition-colors">
+                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
                     {exp.role}
                   </h3>
-                  <a href={exp.link} target="_blank" rel="noreferrer" className={`font-medium ${exp.color} hover:underline flex items-center gap-1 mt-1 text-base`}>
+                  <a href={exp.link} target="_blank" rel="noreferrer" className={`font-medium ${exp.color} hover:underline flex items-center gap-1 mt-1 text-base font-mono`}>
                     {exp.company} <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
-                <span className="text-xs font-bold tracking-wider uppercase text-slate-500 dark:text-gray-400 mt-4 md:mt-0 bg-slate-100 dark:bg-white/5 px-4 py-2 rounded-full border border-slate-200 dark:border-white/5">
-                  {exp.period}
+                <span className="text-xs font-bold tracking-widest uppercase text-slate-500 mt-4 md:mt-0 bg-white/5 px-4 py-2 border border-white/10 font-mono">
+                  [{exp.period}]
                 </span>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {exp.description.map((item, i) => (
-                  <li key={i} className="flex items-start text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
-                    <span className={`mt-2 min-w-[6px] h-1.5 rounded-full ${exp.bg} mr-4 opacity-60`}></span>
+                  <li key={i} className="flex items-start text-slate-400 text-sm leading-relaxed font-sans">
+                    <span className={`mt-2 min-w-[6px] h-1.5 ${exp.bg} mr-4 opacity-80`}></span>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-6 border-t border-slate-100 dark:border-white/5">
+              <div className="flex flex-wrap gap-2 pt-6 border-t border-white/10">
                 {exp.skills.map(skill => (
-                  <span key={skill} className="px-3 py-1 rounded-lg text-xs font-semibold bg-slate-50/50 dark:bg-white/5 text-slate-600 dark:text-gray-400 transition-colors hover:bg-slate-100 dark:hover:bg-white/10 cursor-default">
+                  <span key={skill} className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/5 text-slate-400 border border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition-colors cursor-default font-mono">
                     {skill}
                   </span>
                 ))}

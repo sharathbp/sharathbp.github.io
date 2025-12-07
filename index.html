@@ -1,67 +1,77 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    
-    <!-- SEO & Metadata -->
-    <title>Sharath B P | Software Engineer</title>
-    <meta name="description" content="Portfolio of Sharath B P, a Senior Software Engineer at AWS specializing in Distributed Systems, Cloud Architecture, and Full Stack Development.">
-    <meta name="keywords" content="Sharath B P, Software Engineer, AWS, Java, Distributed Systems, React, Portfolio">
-    <meta name="author" content="Sharath B P">
-    <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://sharathbp.com/">
-    <meta property="og:title" content="Sharath B P | Software Engineer">
-    <meta property="og:description" content="Building scalable distributed systems at AWS. Expert in Java, Cloud Architecture, and UI/UX.">
-    <meta property="og:image" content="https://sharathbp.com/og-image.jpg">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://sharathbp.com/">
-    <meta property="twitter:title" content="Sharath B P | Software Engineer">
-    <meta property="twitter:description" content="Building scalable distributed systems at AWS. Expert in Java, Cloud Architecture, and UI/UX.">
-    <meta property="twitter:image" content="https://sharathbp.com/og-image.jpg">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    
-    <script>
-      // Initialize Dark Mode
-      if (localStorage.theme === 'light') {
-        document.documentElement.classList.remove('dark')
-      } else {
-        document.documentElement.classList.add('dark')
+  <!-- SEO & Metadata -->
+  <!-- SEO & Metadata -->
+  <title>Sharath B P | Transformer Engineer</title>
+  <link rel="icon" type="image/svg+xml" href="/transformer-logo.svg">
+  <meta name="description"
+    content="Portfolio of Sharath B P, a Senior Software Engineer at AWS specializing in Distributed Systems, Cloud Architecture, and Full Stack Development.">
+  <meta name="keywords" content="Sharath B P, Software Engineer, AWS, Java, Distributed Systems, React, Portfolio">
+  <meta name="author" content="Sharath B P">
+  <meta name="robots" content="index, follow">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://sharathbp.com/">
+  <meta property="og:title" content="Sharath B P | Software Engineer">
+  <meta property="og:description"
+    content="Building scalable distributed systems at AWS. Expert in Java, Cloud Architecture, and UI/UX.">
+  <meta property="og:image" content="https://sharathbp.com/og-image.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:url" content="https://sharathbp.com/">
+  <meta property="twitter:title" content="Sharath B P | Software Engineer">
+  <meta property="twitter:description"
+    content="Building scalable distributed systems at AWS. Expert in Java, Cloud Architecture, and UI/UX.">
+  <meta property="twitter:image" content="https://sharathbp.com/og-image.jpg">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Fira+Code:wght@300;400;500;600&display=swap"
+    rel="stylesheet">
+
+  <script>
+    // Initialize Dark Mode
+    if (localStorage.theme === 'light') {
+      document.documentElement.classList.remove('dark')
+    } else {
+      document.documentElement.classList.add('dark')
+    }
+  </script>
+  <script>
+    // Efficient Intersection Observer
+    document.addEventListener('DOMContentLoaded', () => {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('active');
+            // Optional: Stop observing once revealed for performance
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '50px' });
+
+      const observeElements = () => {
+        document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
       }
-    </script>
-    <script>
-      // Efficient Intersection Observer
-      document.addEventListener('DOMContentLoaded', () => {
-        const observer = new IntersectionObserver((entries) => {
-          entries.forEach(entry => {
-            if (entry.isIntersecting) {
-              entry.target.classList.add('active');
-              // Optional: Stop observing once revealed for performance
-              observer.unobserve(entry.target);
-            }
-          });
-        }, { threshold: 0.1, rootMargin: '50px' });
-    
-        const observeElements = () => {
-            document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
-        }
-    
-        observeElements();
-        // Re-run for dynamic content (chats etc)
-        setInterval(observeElements, 2000);
-      });
-    </script>
-  </head>
-  <body class="antialiased text-slate-900 dark:text-white">
-    <div id="root"></div>
-    <script type="module" src="/index.tsx"></script>
-  </body>
+
+      observeElements();
+      // Re-run for dynamic content (chats etc)
+      setInterval(observeElements, 2000);
+    });
+  </script>
+</head>
+
+<body class="antialiased text-slate-900 dark:text-white">
+  <div id="root"></div>
+  <script type="module" src="/index.tsx"></script>
+</body>
+
 </html>

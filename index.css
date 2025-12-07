@@ -3,11 +3,79 @@
 @tailwind utilities;
 
 @layer base {
+  :root {
+    /* Light Mode (Autobot Day) */
+    --bg-main: #f1f5f9;
+    /* Slate 100 */
+    --bg-surface: #ffffff;
+    /* White */
+    --text-main: #0f172a;
+    /* Slate 900 */
+    --text-dim: #64748b;
+    /* Slate 500 */
+
+    --color-primary: #2563eb;
+    /* Autobot Blue */
+    --color-secondary: #dc2626;
+    /* Prime Red */
+    --color-accent: #f59e0b;
+    /* Bumblebee Yellow */
+
+    --border-tech: rgba(37, 99, 235, 0.2);
+    --glow-tech: rgba(37, 99, 235, 0.3);
+
+    --grid-color: #e2e8f0;
+    /* Slate 200 */
+  }
+
+  .dark {
+    /* Dark Mode (Decepticon Night) */
+    --bg-main: #020617;
+    /* Deep Space Blue */
+    --bg-surface: #0f172a;
+    /* Slate 900 */
+    --text-main: #f8fafc;
+    /* Slate 50 */
+    --text-dim: #94a3b8;
+    /* Slate 400 */
+
+    --color-primary: #06b6d4;
+    /* Neon Cyan */
+    --color-secondary: #8b5cf6;
+    /* Electric Purple */
+    --color-accent: #ec4899;
+    /* Hot Pink */
+
+    --border-tech: rgba(6, 182, 212, 0.3);
+    --glow-tech: rgba(6, 182, 212, 0.5);
+
+    --grid-color: #0f172a;
+    /* Slate 900 */
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
   body {
-    @apply font-sans antialiased text-slate-900 dark:text-white;
+    @apply font-sans antialiased transition-colors duration-500;
+    background-color: var(--bg-main);
+    color: var(--text-main);
+    font-family: 'Rajdhani', sans-serif;
     line-height: 1.6;
-    transition: background-color 0.5s cubic-bezier(0.4, 0, 0.2, 1), color 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     overflow-x: hidden;
+  }
+
+  /* Hide default cursor on desktop to show custom one */
+  @media (min-width: 768px) {
+
+    body,
+    a,
+    button,
+    input,
+    textarea {
+      cursor: none !important;
+    }
   }
 
   h1,
@@ -16,297 +84,171 @@
   h4,
   h5,
   h6 {
-    @apply font-display;
+    font-family: 'Orbitron', sans-serif;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
   }
 }
 
 @layer utilities {
 
-  /* Grid Pattern Background */
-  .bg-grid {
-    background-size: 50px 50px;
-    background-image: linear-gradient(to right, rgba(0, 0, 0, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(0, 0, 0, 0.05) 1px, transparent 1px);
-    mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
-    -webkit-mask-image: radial-gradient(circle at center, black 50%, transparent 100%);
+  /* Hex Grid Background - Adaptive */
+  .bg-grid-hex {
+    background-color: var(--bg-main);
+    background-image:
+      linear-gradient(30deg, var(--grid-color) 12%, transparent 12.5%, transparent 87%, var(--grid-color) 87.5%, var(--grid-color)),
+      linear-gradient(150deg, var(--grid-color) 12%, transparent 12.5%, transparent 87%, var(--grid-color) 87.5%, var(--grid-color)),
+      linear-gradient(30deg, var(--grid-color) 12%, transparent 12.5%, transparent 87%, var(--grid-color) 87.5%, var(--grid-color)),
+      linear-gradient(150deg, var(--grid-color) 12%, transparent 12.5%, transparent 87%, var(--grid-color) 87.5%, var(--grid-color)),
+      radial-gradient(circle at center, var(--glow-tech) 0%, transparent 70%);
+    background-size: 40px 70px;
+    background-position: 0 0, 0 0, 20px 35px, 20px 35px, 0 0;
   }
 
-  .dark .bg-grid {
-    background-image: linear-gradient(to right, rgba(255, 255, 255, 0.05) 1px, transparent 1px),
-      linear-gradient(to bottom, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  /* Tech Clip Path (Angled Corners) */
+  .clip-tech {
+    clip-path: polygon(20px 0, 100% 0,
+        100% calc(100% - 20px), calc(100% - 20px) 100%,
+        0 100%, 0 20px);
   }
 
-  /* Cartoon/Hard Shadows */
-  .shadow-cartoon {
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.15);
+  .clip-tech-sm {
+    clip-path: polygon(10px 0, 100% 0,
+        100% calc(100% - 10px), calc(100% - 10px) 100%,
+        0 100%, 0 10px);
   }
 
-  .dark .shadow-cartoon {
-    box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.5);
+  /* Tech Card Style - Adaptive */
+  .tech-card {
+    background-color: rgba(var(--bg-surface), 0.8);
+    /* Needs hex-to-rgb handling or simple opacity if var is hex. Using simple opacity approach requires var to be rgb values or use color-mix. For now, using a simpler approach: */
+    @apply backdrop-blur-md relative overflow-hidden;
+    background-color: var(--bg-surface);
+    opacity: 0.9;
+    border: 1px solid var(--border-tech);
+    box-shadow: 0 0 15px var(--glow-tech);
   }
 
-  .sticker-shadow {
-    filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.1));
+  /* Fix for opacity on hex vars - use a wrapper or just solid color with alpha in hex if supported, or just simple bg */
+  .dark .tech-card {
+    background-color: rgba(15, 23, 42, 0.8);
+    /* Slate 900 / 0.8 */
   }
 
-  /* ========== ENHANCED SCROLL REVEAL ANIMATIONS ========== */
-
-  /* Base Reveal - Fade Up (existing, enhanced) */
-  .reveal {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
+  .tech-card {
+    background-color: rgba(255, 255, 255, 0.8);
   }
 
-  .reveal.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Reveal from Left */
-  .reveal-left {
-    opacity: 0;
-    transform: translateX(-50px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
-  }
-
-  .reveal-left.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  /* Reveal from Right */
-  .reveal-right {
-    opacity: 0;
-    transform: translateX(50px);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
-  }
-
-  .reveal-right.active {
-    opacity: 1;
-    transform: translateX(0);
-  }
-
-  /* Reveal with Scale */
-  .reveal-scale {
-    opacity: 0;
-    transform: scale(0.9);
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    will-change: transform, opacity;
-  }
-
-  .reveal-scale.active {
-    opacity: 1;
-    transform: scale(1);
-  }
-
-  /* Stagger Children */
-  .stagger-item {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: all 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
-
-  .stagger-item.active {
-    opacity: 1;
-    transform: translateY(0);
-  }
-
-  /* Delay Classes */
-  .delay-100 {
-    transition-delay: 100ms;
-  }
-
-  .delay-200 {
-    transition-delay: 200ms;
-  }
-
-  .delay-300 {
-    transition-delay: 300ms;
-  }
-
-  .delay-400 {
-    transition-delay: 400ms;
-  }
-
-  .delay-500 {
-    transition-delay: 500ms;
-  }
-
-  /* Parallax Effect */
-  .parallax {
-    will-change: transform;
-    transition: transform 0.1s ease-out;
-  }
-
-  /* Scroll Progress Bar */
-  .scroll-progress-bar {
-    position: fixed;
+  .tech-card::before {
+    content: '';
+    position: absolute;
     top: 0;
     left: 0;
-    height: 3px;
-    background: linear-gradient(90deg, #4285F4, #8B5CF6, #EC4899);
-    width: 0%;
-    z-index: 9999;
-    transition: width 0.1s ease-out;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, var(--color-primary), var(--color-secondary), transparent);
+    opacity: 0.8;
   }
 
-  /* Card Hover Spring - Subtle Lift */
-  .hover-spring {
-    transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s ease;
+  .tech-card::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 20px;
+    height: 20px;
+    background: linear-gradient(135deg, transparent 50%, var(--color-accent) 50%);
+    opacity: 0.8;
   }
 
-  .hover-spring:hover {
-    transform: translateY(-4px);
+  /* Neon Glow Text */
+  .text-glow {
+    text-shadow: 0 0 10px var(--glow-tech);
+  }
+
+  .text-gradient-cyber {
+    @apply text-transparent bg-clip-text;
+    background-image: linear-gradient(to right, var(--color-primary), var(--color-secondary), var(--color-accent));
+  }
+
+  /* Mechanical Button - Adaptive */
+  .btn-mech {
+    @apply relative px-6 py-2 font-bold uppercase tracking-wider text-sm transition-all duration-300;
+    background: linear-gradient(45deg, var(--bg-surface), var(--bg-main));
+    border: 1px solid var(--border-tech);
+    color: var(--color-primary);
+    clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+  }
+
+  .btn-mech:hover {
+    background: var(--border-tech);
+    box-shadow: 0 0 20px var(--glow-tech);
+    text-shadow: 0 0 8px var(--glow-tech);
+    letter-spacing: 0.15em;
+    border-color: var(--color-primary);
+  }
+
+  .btn-mech-primary {
+    @apply btn-mech;
+    border-color: var(--color-accent);
+    color: var(--color-accent);
+    background: linear-gradient(45deg, var(--bg-main), var(--bg-surface));
+  }
+
+  .btn-mech-primary:hover {
+    background: var(--border-tech);
+    /* Simplified hover bg */
+    box-shadow: 0 0 20px var(--color-accent);
+    text-shadow: 0 0 8px var(--color-accent);
+    border-color: var(--color-accent);
+    color: var(--text-main);
+  }
+
+  /* Glitch Effect Animation */
+  @keyframes glitch {
+    0% {
+      transform: translate(0)
+    }
+
+    20% {
+      transform: translate(-2px, 2px)
+    }
+
+    40% {
+      transform: translate(-2px, -2px)
+    }
+
+    60% {
+      transform: translate(2px, 2px)
+    }
+
+    80% {
+      transform: translate(2px, -2px)
+    }
+
+    100% {
+      transform: translate(0)
+    }
+  }
+
+  .hover-glitch:hover {
+    animation: glitch 0.3s cubic-bezier(.25, .46, .45, .94) both infinite;
+    text-shadow: 2px 2px var(--color-accent), -2px -2px var(--color-primary);
   }
 
   /* Scrollbar */
   ::-webkit-scrollbar {
-    width: 10px;
-  }
-
-  ::-webkit-scrollbar-track {
-    background: transparent;
+    width: 8px;
+    background: var(--bg-main);
   }
 
   ::-webkit-scrollbar-thumb {
-    background-color: #dadce0;
-    border-radius: 20px;
-    border: 2px solid transparent;
-    background-clip: content-box;
-  }
-
-  .dark ::-webkit-scrollbar-thumb {
-    background-color: #5f6368;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-secondary));
+    border-radius: 0;
   }
 
   ::-webkit-scrollbar-thumb:hover {
-    background-color: #bdc1c6;
-  }
-
-  .dark ::-webkit-scrollbar-thumb:hover {
-    background-color: #5f6368;
-  }
-
-  /* Background Shapes */
-  .bg-shape {
-    position: fixed;
-    /* z-index moved to App.tsx to avoid stacking context issues */
-    transition: all 1s ease;
-  }
-
-  /* ========== APPLE LIQUID GLASS THEME ========== */
-
-  /* Glass Card - iOS/macOS Style */
-  .glass-card {
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.08),
-      0 1px 0 rgba(255, 255, 255, 0.5) inset,
-      0 -1px 0 rgba(0, 0, 0, 0.05) inset;
-    border-radius: 20px;
-  }
-
-  .dark .glass-card {
-    background: rgba(255, 255, 255, 0.05);
-    backdrop-filter: blur(30px) saturate(180%);
-    -webkit-backdrop-filter: blur(30px) saturate(180%);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    box-shadow:
-      0 8px 32px rgba(0, 0, 0, 0.3),
-      0 1px 0 rgba(255, 255, 255, 0.1) inset;
-  }
-
-  /* Premium Glass Card with Stronger Effect */
-  .glass-card-premium {
-    background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: blur(40px) saturate(200%);
-    -webkit-backdrop-filter: blur(40px) saturate(200%);
-    border: 1px solid rgba(255, 255, 255, 0.4);
-    box-shadow:
-      0 16px 48px rgba(0, 0, 0, 0.12),
-      0 2px 0 rgba(255, 255, 255, 0.6) inset;
-    border-radius: 24px;
-  }
-
-  .dark .glass-card-premium {
-    background: rgba(255, 255, 255, 0.08);
-    backdrop-filter: blur(40px) saturate(200%);
-    -webkit-backdrop-filter: blur(40px) saturate(200%);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:
-      0 16px 48px rgba(0, 0, 0, 0.4),
-      0 2px 0 rgba(255, 255, 255, 0.15) inset;
-  }
-
-  /* iOS-Style Shadow */
-  .ios-shadow {
-    box-shadow:
-      0 2px 8px rgba(0, 0, 0, 0.04),
-      0 4px 16px rgba(0, 0, 0, 0.06),
-      0 8px 32px rgba(0, 0, 0, 0.08);
-  }
-
-  .dark .ios-shadow {
-    box-shadow:
-      0 2px 8px rgba(0, 0, 0, 0.3),
-      0 4px 16px rgba(0, 0, 0, 0.2),
-      0 8px 32px rgba(0, 0, 0, 0.1);
-  }
-
-  /* Soft Glow Effect */
-  .soft-glow {
-    box-shadow:
-      0 0 20px rgba(139, 92, 246, 0.15),
-      0 0 40px rgba(59, 130, 246, 0.1);
-  }
-
-  .dark .soft-glow {
-    box-shadow:
-      0 0 20px rgba(139, 92, 246, 0.25),
-      0 0 40px rgba(59, 130, 246, 0.15);
-  }
-
-  /* Apple-Style Hover Lift */
-  .apple-hover {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  .apple-hover:hover {
-    transform: translateY(-4px) scale(1.01);
-    box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.12),
-      0 2px 0 rgba(255, 255, 255, 0.7) inset;
-  }
-
-  .dark .apple-hover:hover {
-    box-shadow:
-      0 12px 40px rgba(0, 0, 0, 0.5),
-      0 2px 0 rgba(255, 255, 255, 0.2) inset,
-      0 0 30px rgba(139, 92, 246, 0.2);
-  }
-
-  /* Frosted Glass Button */
-  .glass-button {
-    background: rgba(255, 255, 255, 0.15);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    box-shadow:
-      0 4px 16px rgba(0, 0, 0, 0.08),
-      0 1px 0 rgba(255, 255, 255, 0.4) inset;
-  }
-
-  .dark .glass-button {
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    box-shadow:
-      0 4px 16px rgba(0, 0, 0, 0.3),
-      0 1px 0 rgba(255, 255, 255, 0.15) inset;
+    background: linear-gradient(to bottom, var(--color-primary), var(--color-accent));
+    box-shadow: 0 0 15px var(--glow-tech);
   }
 }

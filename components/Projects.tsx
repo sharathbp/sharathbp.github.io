@@ -45,10 +45,12 @@ const projects: Project[] = [
 
 const Projects: React.FC = () => {
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="py-10">
       <div className="flex items-center gap-3 mb-10 reveal">
-        <span className="w-3 h-3 bg-google-green rounded-full animate-pulse"></span>
-        <h2 className="text-2xl font-bold text-slate-900 dark:text-white font-display">Featured Projects</h2>
+        <span className="w-2 h-2 bg-purple-500 rounded-none animate-pulse"></span>
+        <h2 className="text-2xl font-bold text-white font-display tracking-widest uppercase">
+          &lt; Mission.Files /&gt;
+        </h2>
       </div>
 
       <div className="space-y-16">
@@ -62,25 +64,26 @@ const Projects: React.FC = () => {
               href={project.link}
               target="_blank"
               rel="noreferrer"
-              className="grid md:grid-cols-[250px_1fr] gap-6 hover:opacity-100 transition-opacity duration-300"
+              className="grid md:grid-cols-[250px_1fr] gap-6 hover:opacity-100 transition-opacity duration-300 tech-card p-6 clip-tech"
             >
               {/* Project Image */}
-              <div className="relative rounded-lg overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-800 aspect-video md:aspect-auto md:h-32">
+              <div className="relative overflow-hidden border border-white/10 bg-slate-800 aspect-video md:aspect-auto md:h-32 clip-tech-sm">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
-                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-105"
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 grayscale group-hover:grayscale-0"
                 />
+                <div className="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
               </div>
 
               {/* Project Content */}
               <div className="flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2 group-hover:text-google-blue transition-colors">
+                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2 group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
                   {project.title}
                   <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
 
-                <p className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed mb-4">
+                <p className="text-slate-400 text-sm leading-relaxed mb-4 font-sans">
                   {project.description}
                 </p>
 
@@ -88,7 +91,7 @@ const Projects: React.FC = () => {
                   {project.tags.map(tag => (
                     <span
                       key={tag}
-                      className="text-xs font-medium px-3 py-1 rounded-full bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-gray-400 border border-slate-200 dark:border-white/5"
+                      className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 bg-white/5 text-slate-400 border border-white/10 font-mono"
                     >
                       {tag}
                     </span>
@@ -104,9 +107,9 @@ const Projects: React.FC = () => {
       <div className="mt-12 text-center reveal">
         <Link
           to="/archive"
-          className="inline-flex items-center gap-2 text-slate-600 dark:text-gray-300 hover:text-google-blue dark:hover:text-google-blue transition-colors font-medium"
+          className="btn-mech inline-flex items-center gap-2"
         >
-          view full project archive
+          ACCESS FULL ARCHIVE
           <ArrowUpRight className="w-4 h-4" />
         </Link>
       </div>

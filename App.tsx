@@ -8,18 +8,22 @@ import Projects from './components/Projects';
 import Contact from './components/Contact';
 import AIChatWidget from './components/AIChatWidget';
 import Archive from './components/Archive';
-import { ReactLogo, JavaLogo, PythonLogo, DockerLogo, KubernetesLogo, PostgresLogo, RedisLogo, SpringLogo, NodeJSLogo, AWSLogo, TypeScriptLogo } from './components/Icons';
+import Footer from './components/Footer';
+import CustomCursor from './components/CustomCursor';
 
 const HomePage: React.FC = () => (
   <>
+    <div className="fixed inset-0 bg-grid-hex z-[-1]" />
+    <CustomCursor />
     <Navbar />
-    <main className="mx-auto max-w-6xl px-6 pb-24 md:px-12 pt-28 space-y-32 relative z-10">
+    <main className="mx-auto max-w-6xl px-6 pb-24 md:px-12 pt-24 space-y-12 relative z-10">
       <Hero />
       <About />
       <Experience />
       <Projects />
       <Contact />
     </main>
+    <Footer />
     <AIChatWidget />
   </>
 );
@@ -31,7 +35,7 @@ const App: React.FC = () => {
       {/* --- APPLE LIQUID GLASS BACKGROUND --- */}
 
       {/* Soft Gradient Mesh Orbs with Parallax */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none">
+      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
         {/* Gradient Orb 1 - Blue/Purple - Slowest */}
         <div className="parallax absolute top-[10%] left-[10%] w-[600px] h-[600px] rounded-full bg-gradient-to-br from-blue-400/20 to-purple-400/20 blur-[120px] animate-float" data-speed="0.3"></div>
 
