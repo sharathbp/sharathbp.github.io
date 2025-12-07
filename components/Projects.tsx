@@ -48,7 +48,7 @@ const Projects: React.FC = () => {
     <section id="projects" className="py-10">
       <div className="flex items-center gap-3 mb-10 reveal">
         <span className="w-2 h-2 bg-purple-500 rounded-none animate-pulse"></span>
-        <h2 className="text-2xl font-bold text-white font-display tracking-widest uppercase">
+        <h2 className="text-2xl font-bold text-[var(--text-main)] font-display tracking-widest uppercase">
           &lt; Mission.Files /&gt;
         </h2>
       </div>
@@ -67,7 +67,7 @@ const Projects: React.FC = () => {
               className="grid md:grid-cols-[250px_1fr] gap-6 hover:opacity-100 transition-opacity duration-300 tech-card p-6 clip-tech"
             >
               {/* Project Image */}
-              <div className="relative overflow-hidden border border-white/10 bg-slate-800 aspect-video md:aspect-auto md:h-32 clip-tech-sm">
+              <div className="relative overflow-hidden border border-slate-200 dark:border-white/10 bg-slate-100 dark:bg-slate-800 aspect-video md:aspect-auto md:h-32 clip-tech-sm">
                 <img
                   src={project.imageUrl}
                   alt={project.title}
@@ -78,12 +78,12 @@ const Projects: React.FC = () => {
 
               {/* Project Content */}
               <div className="flex flex-col justify-center">
-                <h3 className="text-xl font-bold text-white mb-2 flex items-center gap-2 group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
+                <h3 className="text-xl font-bold text-[var(--text-main)] mb-2 flex items-center gap-2 group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
                   {project.title}
                   <ArrowUpRight className="w-4 h-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                 </h3>
 
-                <p className="text-slate-400 text-sm leading-relaxed mb-4 font-sans">
+                <p className="text-[var(--text-dim)] text-sm leading-relaxed mb-4 font-sans">
                   {project.description}
                 </p>
 
@@ -91,7 +91,7 @@ const Projects: React.FC = () => {
                   {project.tags.map(tag => (
                     <span
                       key={tag}
-                      className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 bg-white/5 text-slate-400 border border-white/10 font-mono"
+                      className="text-[10px] font-bold uppercase tracking-wider px-3 py-1 bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 font-mono"
                     >
                       {tag}
                     </span>

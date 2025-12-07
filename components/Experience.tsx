@@ -73,7 +73,7 @@ const Experience: React.FC = () => {
     <section id="experience" className="py-10">
       <div className="flex items-center gap-3 mb-10 reveal">
         <span className="w-2 h-2 bg-pink-500 rounded-none animate-pulse"></span>
-        <h2 className="text-2xl font-bold text-white font-display tracking-widest uppercase">
+        <h2 className="text-2xl font-bold text-[var(--text-main)] font-display tracking-widest uppercase">
           &lt; System.Log /&gt;
         </h2>
       </div>
@@ -92,30 +92,30 @@ const Experience: React.FC = () => {
 
               <div className="flex flex-col md:flex-row md:items-center justify-between mb-6">
                 <div>
-                  <h3 className="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
+                  <h3 className="text-xl font-bold text-[var(--text-main)] group-hover:text-cyan-400 transition-colors font-display uppercase tracking-wide">
                     {exp.role}
                   </h3>
                   <a href={exp.link} target="_blank" rel="noreferrer" className={`font-medium ${exp.color} hover:underline flex items-center gap-1 mt-1 text-base font-mono`}>
                     {exp.company} <ArrowUpRight className="w-4 h-4" />
                   </a>
                 </div>
-                <span className="text-xs font-bold tracking-widest uppercase text-slate-500 mt-4 md:mt-0 bg-white/5 px-4 py-2 border border-white/10 font-mono">
+                <span className="text-xs font-bold tracking-widest uppercase text-[var(--text-dim)] mt-4 md:mt-0 bg-slate-100 dark:bg-white/5 px-4 py-2 border border-slate-200 dark:border-white/10 font-mono">
                   [{exp.period}]
                 </span>
               </div>
 
               <ul className="space-y-4 mb-8">
                 {exp.description.map((item, i) => (
-                  <li key={i} className="flex items-start text-slate-400 text-sm leading-relaxed font-sans">
+                  <li key={i} className="flex items-start text-[var(--text-dim)] text-sm leading-relaxed font-sans">
                     <span className={`mt-2 min-w-[6px] h-1.5 ${exp.bg} mr-4 opacity-80`}></span>
                     {item}
                   </li>
                 ))}
               </ul>
 
-              <div className="flex flex-wrap gap-2 pt-6 border-t border-white/10">
+              <div className="flex flex-wrap gap-2 pt-6 border-t border-slate-200 dark:border-white/10">
                 {exp.skills.map(skill => (
-                  <span key={skill} className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-white/5 text-slate-400 border border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition-colors cursor-default font-mono">
+                  <span key={skill} className="px-3 py-1 text-[10px] font-bold uppercase tracking-wider bg-slate-100 dark:bg-white/5 text-slate-600 dark:text-slate-400 border border-slate-200 dark:border-white/10 hover:border-cyan-500/50 hover:text-cyan-400 transition-colors cursor-default font-mono">
                     {skill}
                   </span>
                 ))}

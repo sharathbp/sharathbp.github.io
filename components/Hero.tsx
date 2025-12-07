@@ -11,23 +11,23 @@ const Hero: React.FC = () => {
       <div className="absolute bottom-1/4 right-10 w-24 h-24 border-b-2 border-r-2 border-purple-500/20 rounded-br-3xl animate-pulse delay-700"></div>
 
       {/* System Status Badge */}
-      <div className="reveal inline-flex items-center gap-2 px-4 py-1 mb-8 text-xs font-mono font-bold tracking-widest text-cyan-400 uppercase bg-cyan-900/20 border border-cyan-500/30 clip-tech-sm">
-        <span className="w-2 h-2 bg-cyan-500 rounded-full animate-ping"></span>
+      <div className="reveal inline-flex items-center gap-2 px-4 py-1 mb-8 text-xs font-mono font-bold tracking-widest text-cyan-700 dark:text-cyan-400 uppercase bg-cyan-100 dark:bg-cyan-900/20 border border-cyan-300 dark:border-cyan-500/30 clip-tech-sm">
+        <span className="w-2 h-2 bg-cyan-600 dark:bg-cyan-500 rounded-full animate-ping"></span>
         System Online // Engineer.Class
       </div>
 
       {/* Jumbo Typography */}
       <h1 className="reveal delay-100 text-6xl md:text-8xl lg:text-9xl font-black tracking-tighter font-display mb-8 leading-[0.85] uppercase">
-        <span className="block text-white text-glow hover-glitch" data-text="CODE">Code.</span>
+        <span className="block text-[var(--text-main)] text-glow hover-glitch" data-text="ARCHITECT">Architect.</span>
         <span className="block text-gradient-cyber pb-4 hover-glitch" data-text="TRANSFORM">
           Transform.
         </span>
-        <span className="block text-slate-500 hover:text-white transition-colors duration-300 hover-glitch" data-text="DEPLOY">Deploy.</span>
+        <span className="block text-slate-500 hover:text-[var(--text-main)] transition-colors duration-300 hover-glitch" data-text="EVOLVE">Evolve.</span>
       </h1>
 
-      <p className="reveal delay-200 max-w-2xl text-lg md:text-xl text-slate-400 font-sans leading-relaxed mb-12 border-l-2 border-purple-500 pl-6 text-left mx-auto bg-white/5 p-4 clip-tech-sm">
-        <span className="text-purple-400 font-bold">&gt;&gt; IDENTITY CONFIRMED:</span> Sharath B P.<br />
-        <span className="text-cyan-400 font-bold">&gt;&gt; MISSION:</span> Architecting scalable distributed systems at <span className="text-white font-bold">AWS</span>. Turning chaos into structured code.
+      <p className="reveal delay-200 max-w-2xl text-lg md:text-xl text-[var(--text-dim)] font-sans leading-relaxed mb-12 border-l-2 border-purple-500 pl-6 text-left mx-auto bg-slate-100 dark:bg-white/5 p-4 clip-tech-sm">
+        <span className="text-purple-600 dark:text-purple-400 font-bold">&gt;&gt; IDENTITY CONFIRMED:</span> Sharath B P.<br />
+        <span className="text-cyan-600 dark:text-cyan-400 font-bold">&gt;&gt; MISSION:</span> Architecting scalable distributed systems at <span className="text-[var(--text-main)] font-bold">AWS</span>. Turning chaos into structured code.
       </p>
 
       {/* Mechanical Buttons */}

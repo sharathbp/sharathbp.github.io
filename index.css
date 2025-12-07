@@ -4,53 +4,55 @@
 
 @layer base {
   :root {
-    /* Light Mode (Autobot Day) */
-    --bg-main: #f1f5f9;
-    /* Slate 100 */
-    --bg-surface: #ffffff;
-    /* White */
-    --text-main: #0f172a;
-    /* Slate 900 */
-    --text-dim: #64748b;
-    /* Slate 500 */
+    /* Light Mode (Autobot Day) - High Contrast */
+    --bg-main: #ffffff;
+    /* Pure White */
+    --bg-surface: #f8fafc;
+    /* Slate 50 */
+    --text-main: #020617;
+    /* Slate 950 (Almost Black) */
+    --text-dim: #334155;
+    /* Slate 700 */
 
-    --color-primary: #2563eb;
-    /* Autobot Blue */
-    --color-secondary: #dc2626;
-    /* Prime Red */
-    --color-accent: #f59e0b;
-    /* Bumblebee Yellow */
+    --color-primary: #1d4ed8;
+    /* Darker Blue for better text contrast */
+    --color-secondary: #b91c1c;
+    /* Darker Red */
+    --color-accent: #d97706;
+    /* Darker Amber */
 
-    --border-tech: rgba(37, 99, 235, 0.2);
-    --glow-tech: rgba(37, 99, 235, 0.3);
+    --border-tech: rgba(29, 78, 216, 0.2);
+    --glow-tech: rgba(29, 78, 216, 0.15);
+    /* Reduced glow for clarity */
 
     --grid-color: #e2e8f0;
     /* Slate 200 */
   }
 
   .dark {
-    /* Dark Mode (Decepticon Night) */
+    /* Dark Mode (Decepticon Night) - High Contrast */
     --bg-main: #020617;
-    /* Deep Space Blue */
+    /* Deep Space Blue (Very Dark) */
     --bg-surface: #0f172a;
     /* Slate 900 */
-    --text-main: #f8fafc;
-    /* Slate 50 */
-    --text-dim: #94a3b8;
-    /* Slate 400 */
+    --text-main: #ffffff;
+    /* Pure White */
+    --text-dim: #e2e8f0;
+    /* Slate 200 */
 
-    --color-primary: #06b6d4;
-    /* Neon Cyan */
-    --color-secondary: #8b5cf6;
-    /* Electric Purple */
-    --color-accent: #ec4899;
-    /* Hot Pink */
+    --color-primary: #22d3ee;
+    /* Cyan 400 (Bright) */
+    --color-secondary: #a78bfa;
+    /* Violet 400 */
+    --color-accent: #f472b6;
+    /* Pink 400 */
 
-    --border-tech: rgba(6, 182, 212, 0.3);
-    --glow-tech: rgba(6, 182, 212, 0.5);
+    --border-tech: rgba(34, 211, 238, 0.3);
+    --glow-tech: rgba(34, 211, 238, 0.3);
+    /* Controlled glow */
 
-    --grid-color: #0f172a;
-    /* Slate 900 */
+    --grid-color: #1e293b;
+    /* Slate 800 */
   }
 
   html {
